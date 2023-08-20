@@ -92,7 +92,7 @@ const EditPage = () => {
     },3000)
   }
   return (
-    <div className='xs:w-11/12 mt-20 md:w-9/12 mx-auto  md:py-3 relative'>
+    <div className='xs:w-11/12 mt-12 md:w-9/12 mx-auto  md:py-3 relative'>
       {error && <h1 className='break-words text-xs text-center font-bold w-full text-red-500'>{error}</h1>}
       <h1 className='text-2xl my-2'>Blog - id</h1>
       <input value={Blog._id} readOnly type="text" className='p-2 outline-none border-solid border-black/20 border-[1px] w-full' />
