@@ -10,6 +10,7 @@ const Blog = ({data}) => {
             left:  0
         })
     }
+    console.log(data)
   return (
     <Link onClick={handleTop} to={username ? `/blog/${data?._id}` : '/login'} className='w-full flex items-start justify-start xs:flex-col lg:flex-row blog my-8 shadow-md shadow-black/20 p-1'>
         <div className='cursor-pointer w-full mr-5'>
@@ -24,7 +25,7 @@ const Blog = ({data}) => {
             </p>
             <div className={`${(data.author._id === id) ? 'justify-between' : 'justify-end'} h-full my-5 xs:w-[90%] sm:w-[96%] flex items-center`}>
                 <Link to={username ? `/relatedBlogs/${data?.author?._id}` : '/login'} className='text-xs font-bold'><span className='font-normal mr-1'>Author :</span>{data?.author?.username}</Link>
-                {(data.author._id === id && navigate) && <Link to={username ? `/editPage/${Blog._id}` : '/login'}  className='p-3 w-4/12 bg-black text-white flex items-center justify-center text-xs rounded-sm'><BsFillPenFill className='mr-2' />Edit Post</Link>}
+                {(data.author._id === id && navigate) && <Link to={username ? `/editPage/${data._id}` : '/login'}  className='p-3 w-4/12 bg-black text-white flex items-center justify-center text-xs rounded-sm'><BsFillPenFill className='mr-2' />Edit Post</Link>}
             </div>
         </div>
     </Link>
