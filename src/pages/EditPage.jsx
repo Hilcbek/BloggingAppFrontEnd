@@ -3,7 +3,7 @@ import ReactQuill from 'react-quill';
 import {AiOutlineReload} from 'react-icons/ai'
 import 'react-quill/dist/quill.snow.css';
 import {FcPicture} from 'react-icons/fc'
-import PuffLoader from "react-spinners/ClipLoader";
+import PuffLoader from "react-spinners/PuffLoader";
 import { Axios, Upload } from '../utils/Acxios';
 import { useLocation, useNavigate } from 'react-router-dom';
 import {useSelector} from 'react-redux'

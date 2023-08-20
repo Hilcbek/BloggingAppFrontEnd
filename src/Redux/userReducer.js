@@ -6,7 +6,8 @@ let UserSlice = createSlice({
         id : JSON.parse(localStorage.getItem("id")) || null,
         username : JSON.parse(localStorage.getItem("username")) || null,
         profile : JSON.parse(localStorage.getItem("profile")) || null,
-        navigate : true
+        navigate : true,
+        deleter : true
     },
     reducers : {
         LOGIN:  (state,action) => {
@@ -21,8 +22,11 @@ let UserSlice = createSlice({
         LOGOUT: (state,action) => {
             localStorage.clear()
             state.navigate = action.payload.navigate
+        },
+        REFRESH : (state,action) => {
+            state.deleter = action.payload.deleter
         }
     }
 })
-export let {LOGIN,LOGOUT} = UserSlice.actions
+export let {LOGIN,LOGOUT,REFRESH} = UserSlice.actions
 export default UserSlice.reducer
