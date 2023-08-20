@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export let Axios = axios.create({
-    baseURL : 'http://localhost:5000/api',
+    baseURL : 'https://blogapp-9s4n.onrender.com/',
     withCredentials : true
 })
 export let Upload = async (url) => {
