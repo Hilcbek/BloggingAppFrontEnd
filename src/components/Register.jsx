@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { BsEye, BsEyeSlash } from 'react-icons/bs'
 import { Link, useNavigate } from 'react-router-dom'
 import { Axios, Upload } from '../utils/Acxios'
-import PuffLoader from "react-spinners/ClipLoader";
+import PuffLoader from "react-spinners/PuffLoader";
 const Register = () => {
   let [loading, setLoading] = useState(false);
   let [color, setColor] = useState("#ffffff");
