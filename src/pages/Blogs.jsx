@@ -31,7 +31,6 @@ const Blogs = () => {
       }
       search2 && result()
   },[search2])
-  console.log(deleter)
   return (
     <div className={`${loading ? 'flex items-center justify-center flex-col' : 'flex items-start justify-start flex-col' } w-full my-5 relative`}>
           {posts.length > 0 && <div className='my-2 flex items-center justify-start mr-1 w-full'>
