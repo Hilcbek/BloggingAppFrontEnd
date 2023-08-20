@@ -94,9 +94,9 @@ const Nav = () => {
             </div>}
             <div className='x_xl:hidden xs:flex mt-10 items-start justify-start flex-col w-11/12 mx-auto'>
                 {(username && navigate) ? <div className='flex items-center justify-startt flex-col w-full'>
-                    <ul className='flex items-start w-full flex-col ml-3 justify-start text-sm font-medium '>
-                        <Link onClick={() => setShow(!show)} to={'/'} className='link my-2 relative before:absolute before:left-0 before:-bottom-1 before:bg-black/50 before:rounded-md before:content-[""] before:w-0 before:h-[2px] before:hover:w-full flex items-center justify-start'><CiHome className={'mr-1'} />Home</Link>
-                        <Link onClick={() => setShow(!show)} to={'/addblog'} className='link my-2 relative before:absolute before:left-0 before:-bottom-1 before:bg-black/50 before:rounded-md before:content-[""] before:w-0 before:h-[2px] before:hover:w-full flex items-center justify-start'><CiHome className={'mr-1'} />Add Blog</Link>
+                    <ul className='flex items-start w-full flex-col ml-3 justify-start text-sm font-medium'>
+                        <Link onClick={() => setShow(!show)} to={'/'} className='w-full link my-2 relative before:absolute before:left-0 before:-bottom-1 before:bg-black/50 before:rounded-md before:content-[""] before:w-0 before:h-[2px] before:hover:w-full flex items-center justify-start'><CiHome className={'mr-1'} />Home</Link>
+                        <Link onClick={() => setShow(!show)} to={username ? '/addblog' : '/'} className='w-full link my-2 relative before:absolute before:left-0 before:-bottom-1 before:bg-black/50 before:rounded-md before:content-[""] before:w-0 before:h-[2px] before:hover:w-full flex items-center justify-start'><CiHome className={'mr-1'} />Add Blog</Link>
                         <div className='w-11 h-11 rounded-full my-2 border-solid p-1 border-black/70 border-[2px]'>
                             <img className='w-full h-full object-contain rounded-full' src={profile} alt="" />
                         </div>
@@ -104,7 +104,7 @@ const Nav = () => {
                         <button onClick={Logout} className='z-[999] my-2 w-full p-3 border-solid border-black/50 rounded-md tracking-wider text-xs border-[1px]'>Logout</button>
                     </ul>
                 </div> : 
-                <ul className='flex items-start justify-start text-sm font-normal flex-col cursor-pointer'>
+                <ul className='flex items-start justify-start text-sm font-normal flex-col cursor-pointer w-full'>
                     <Link onClick={() => setShow(!show)} to={'/register'} className='w-full my-2 flex items-center justify-start mx-3 relative before:absolute before:left-0 before:-bottom-1 before:bg-black/50 before:rounded-md before:content-[""] before:w-0 before:h-[2px] before:hover:w-full'><CiUser  className={'mr-1'} /> Register</Link>
                     <Link onClick={() => setShow(!show)} to={'/login'} className='w-full my-2 flex items-center justify-start mx-3 relative before:absolute before:left-0 before:-bottom-1 before:bg-black/50 before:rounded-md before:content-[""] before:w-0 before:h-[2px] before:hover:w-full'><PiDoorOpenThin className={'mr-1'} />Login</Link>
                 </ul>}

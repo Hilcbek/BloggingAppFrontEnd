@@ -23,6 +23,7 @@ const Blog = ({data}) => {
         res.data.data && setLoading(false)
         dispatch(REFRESH({ deleter : false }))
     }
+    console.log(data)
   return (
     <div className='w-full flex items-start justify-start xs:flex-col lg:flex-row blog my-8 shadow-md shadow-black/20 p-1'>
         <Link onClick={handleTop} to={username ? `/blog/${data?._id}` : '/login'} className='cursor-pointer w-full mr-5'>
