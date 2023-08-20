@@ -16,11 +16,11 @@ const EditPage = () => {
         setLoading3(true)
         let func = async () => {
             let res = await Axios.get(`/blog/searchById/${location}`)
+            res.data.data && setLoading3(false)
             setBlog(res.data.data)
             setTitle(res.data.data.title)
             setValue(res.data.data.desc)
             setImages(res.data.data.images)
-            res.data.data && setLoading3(false)
         }
         location && func()
     },[location])
