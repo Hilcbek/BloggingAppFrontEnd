@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500&family=Quicksand:wght@300;400;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: .2s all linear;
+}
+*::-webkit-scrollbar{
+    width: 0;
+}
+@media screen and (min-width: 1140px){
+   .blog:nth-child(2n){
+        flex-direction: row-reverse;
+    }
+}
+.transition{
+    transition : 2s all cubic-bezier(0.68, -0.55, 0.265, 1.55)
+}
+@media screen and (min-width: 640px){
+   .logo{
+        width: 200px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 30px;
+        box-shadow: 0px 20px 5px 5px rgba(0,0,0,0.2);
+        animation: animate 2s ease-in-out infinite;
+        transition: all 1s ease-in-out;
+        background-color: #F4D03F;
+        background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+@media screen and (max-width: 640px){
+   .logo{
+        width: 200px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 30px;
+        box-shadow: 0px 20px 5px 5px rgba(0,0,0,0.2);
+        animation: animate 2s ease-in-out infinite;
+        transition: all 1s ease-in-out;
+        background-color: #F4D03F;
+        background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+@keyframes animate{
+    0%{
+        border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50%{
+        border-radius:  30% 60% 70% 40% / 50% 60% 40% 70%;
+    }
+    100%{
+        border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
