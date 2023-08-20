@@ -47,10 +47,6 @@ const AddBlog = () => {
     }
     AxiosFetch()
   },[])
-  //     TagsAll.forEach((data) => {
-  //       obj[data.tag] = data._id
-  //     })
-  // console.log(obj)
   let AddPost = async () => {
     let filters = tags.map((tag) => { return tag.split("(")[1].split(")")[0]})
     setLoading(true)
