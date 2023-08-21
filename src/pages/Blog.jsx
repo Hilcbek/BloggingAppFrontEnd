@@ -39,7 +39,7 @@ const Blog = ({data}) => {
                     }
                 </div>
              <span className='ml-2'>{data?.createdAt}</span></h2>
-            <p dangerouslySetInnerHTML={{__html : String(data?.desc).substring(0,300).concat('...')}} className='w-[96%] cursor-auto break-words'>
+            <p dangerouslySetInnerHTML={{__html : String(data?.desc).substring(0,300).concat('...')}} className='w-[96%] text-2xl cursor-auto break-words'>
             </p>
             <div className={`${(data.author._id === id) ? 'justify-between' : 'justify-end'} h-full my-5 xs:w-[90%] sm:w-[96%] flex items-center`}>
                 <Link to={username ? `/relatedBlogs/${data?.author?._id}` : '/login'} className='text-xs font-bold'><span className='font-normal mr-1'>Author :</span>{data?.author?.username}</Link>
