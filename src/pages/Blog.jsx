@@ -32,14 +32,15 @@ const Blog = ({data}) => {
        </abbr>
         <div className='ml-5 flex w-full items-start justify-between flex-col'>
             <h1 className='xs:text-2xl xs:w-11/12 sm:w-full sm:text-4xl font-bold break-words w-11/12'>{data?.title}</h1>
-            <h2 className='my-3 text-xs font-medium ml-5 w-full flex items-start justify-start group cursor-pointer'>
+            <h2 className='my-3 text-xs font-medium ml-5 w-full flex items-start justify-start xs:flex-col sm:flex-row group cursor-pointer'>
                 <div className='w-8/12 flex-wrap flex items-start justify-start'>
                     {
                         data?.tag?.map((tag) => <Link to={`/relatedBlogs/${tag._id}`} className='mx-2 flex items-center justify-start hover:underline hover:italic'><BsLink45Deg className='mr-1 group-hover:text-blue-800 cursor-pointer font-bold' />{tag?.tag}</Link>)
                     }
                 </div>
-             <span className='ml-2'>{data?.createdAt}</span></h2>
-            <p dangerouslySetInnerHTML={{__html : String(data?.desc).substring(0,300).concat('...')}} className='w-[96%] text-2xl cursor-auto break-words'>
+                <span className='ml-2'>{data?.createdAt}</span>
+             </h2>
+            <p dangerouslySetInnerHTML={{__html : String(data?.desc).substring(0,300).concat('...')}} className='w-[96%] xs:text-[12px] sm:text-[16px] text-2xl cursor-auto break-words'>
             </p>
             <div className={`${(data.author._id === id) ? 'justify-between' : 'justify-end'} h-full my-5 xs:w-[90%] sm:w-[96%] flex items-center`}>
                 <Link to={username ? `/relatedBlogs/${data?.author?._id}` : '/login'} className='text-xs font-bold'><span className='font-normal mr-1'>Author :</span>{data?.author?.username}</Link>

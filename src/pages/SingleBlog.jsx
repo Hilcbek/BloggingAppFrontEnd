@@ -23,9 +23,9 @@ export const SingleBlog = () => {
      <div className='w-full mt-14'>
         {loading ? <PuffLoader color={color} loading={loading} size={120} aria-label="Loading Spinner" data-testid="loader"/> : <div className='xs:w-11/12 md:w-9/12 mx-auto flex items-start justify-start flex-col blog my-8 shadow-md shadow-black/20 p-1'>
             {(Blog?.author?._id === id) && <div className='flex items-center justify-end w-full'>
-                <Link to={`/editPage/${Blog._id}`} className='p-3 xs:w-4/12 md:w-2/12 bg-black text-white flex items-center justify-center text-xs rounded-sm'><BsFillPenFill className='mr-2' />Edit Post</Link>
+                <Link to={`/editPage/${Blog._id}`} className='p-3 xs:w-8/12 md:w-2/12 bg-black text-white flex items-center justify-center text-xs rounded-sm'><BsFillPenFill className='mr-2' />Edit Post</Link>
             </div>}
-            <h1 className='ml-5 w-8/12 text-4xl font-bold mb-3 underline flex items-center justify-center'>{Blog?.title}
+            <h1 className='ml-5 w-8/12 xs:text-2xl sm:text-4xl font-bold mb-3 underline flex items-center xs:flex-col sm:flex-row justify-center'>{Blog?.title}
                 <div className='w-5/12 ml-4 flex-wrap flex items-start justify-start'>
                     {
                          Blog?.tag?.map((tag,idx) => (
@@ -42,9 +42,9 @@ export const SingleBlog = () => {
                  }
             </div>
             <div className=' ml-5 flex w-full items-start justify-between flex-col'>
-                <p dangerouslySetInnerHTML={{__html : String(Blog?.desc)}}  className='my-2 break-words w-[96%]'>
+                <p dangerouslySetInnerHTML={{__html : String(Blog?.desc)}}  className='my-2 xs:text-[12px] sm:text-[16px] break-words w-[96%]'>
                 </p>
-                <div className='h-full my-5 w-[96%] flex items-center justify-end'>
+                <div className='h-full my-5 w-[96%] flex items-center justify-end mr-4'>
                     <Link to={`/relatedBlogs/${Blog?.author?._id}`} className='text-xs font-bold'><span className='font-normal mr-1'>Author :</span>{Blog?.author?.username}</Link>
                 </div>
             </div>

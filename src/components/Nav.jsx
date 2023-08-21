@@ -84,7 +84,7 @@ const Nav = () => {
         </div>}
         <div className={`${show ? 'right-0' : 'right-[-110%]'} x_xl:hidden xs:flex pt-16  bg-white z-[999] top-0 max-h-screen h-screen items-start justify-start flex-col w-full absolute`}>
             {(username && navigate && !location.includes('/addblog')) &&
-            <div className='buttons flex items-start justify-start z-[999] w-11/12 flex-1 mx-auto my-3 max-h-[100px] flex-wrap overflow-y-scroll'>
+            <div className='buttons flex items-start justify-start z-[999] w-11/12 flex-1 mx-auto my-3 max-h-[200px] flex-wrap overflow-y-scroll'>
                 <h1 className='text-xl font-bold mr-3'>Related Tags :</h1>
                {
                 loading ? <PuffLoader color={color} loading={loading} size={18} aria-label="Loading Spinner" data-testid="loader"/> : TagsAll.map((tag,idx) => (
