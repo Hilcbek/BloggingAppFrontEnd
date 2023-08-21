@@ -31,7 +31,7 @@ const Blog = ({data}) => {
             </Link>
        </abbr>
         <div className='ml-5 flex w-full items-start justify-between flex-col'>
-            <h1 className='xs:text-2xl xs:w-11/12 sm:w-full sm:text-4xl font-bold'>{data?.title}</h1>
+            <h1 className='xs:text-2xl xs:w-11/12 sm:w-full sm:text-4xl font-bold break-words w-11/12'>{data?.title}</h1>
             <h2 className='my-3 text-xs font-medium ml-5 w-full flex items-start justify-start group cursor-pointer'>
                 <div className='w-8/12 flex-wrap flex items-start justify-start'>
                     {
