@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 const RelatedPosts = () => {
     let {id} = useSelector((state) => state.user)
     let location = useLocation().pathname.split("/")[2]
+    let title = useLocation().pathname.split("/")[1]
     let [Blogs,setBlogs] = useState([])
     let [loading,setLoading] = useState(false)
     let [color,setColor] = useState('#000000')
@@ -21,7 +22,7 @@ const RelatedPosts = () => {
     },[location])
   return (
     <div className='flex items-start mt-12 justify-start min-h-screen flex-col xs:w-11/12 md:w-9/12 mx-auto'>
-        {(Array.isArray(Blogs) && Blogs.length > 0) && <h1 className='text-xl mt-5 font-bold'>Related Posts of <span className='italic text-red-500'>`{Blogs[0]?.author?.username}`</span></h1>}
+        {(Array.isArray(Blogs) && Blogs.length > 0) && <h1 className='text-xl mt-5 font-bold'>Related Posts of <span className='italic text-red-500'>`{(title === "relatedBlogs") && Blogs[0]?.author?.username}`</span></h1>}
         {
             loading ? <PuffLoader color={color} loading={loading} size={100} aria-label="Loading Spinner" data-testid="loader"/> : (Array.isArray(Blogs) && Blogs.length > 0) ? (
                 Blogs?.map((data) => (

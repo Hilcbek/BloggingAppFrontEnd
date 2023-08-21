@@ -24,6 +24,7 @@ function App() {
           <Route path="/addBlog" element={(username && navigate) ? <AddBlog /> : <Login />} />
           <Route path="/editPage/:id" element={(username && navigate) ? <EditPage /> : <Login />} />
           <Route path="/relatedBlogs/:id" element={(username && navigate) ? <RelatedPosts /> : <Login />} />
+          <Route path="/relatedTag/:id" element={(username && navigate) ? <RelatedPosts /> : <Login />} />
         </Routes>
       </BrowserRouter>
     </div>
