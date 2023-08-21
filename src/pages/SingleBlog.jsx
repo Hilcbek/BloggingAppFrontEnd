@@ -26,7 +26,7 @@ export const SingleBlog = () => {
                 <Link to={`/editPage/${Blog._id}`} className='p-3 xs:w-8/12 md:w-2/12 bg-black text-white flex items-center justify-center text-xs rounded-sm'><BsFillPenFill className='mr-2' />Edit Post</Link>
             </div>}
             <h1 className='xs:text-xl sm:w-full sm:text-4xl xs:my-2 md:my-0 font-bold xs:underline sm:underline-no break-words xs:w-full md:w-11/12'>{Blog?.title}
-                <div className='w-8/12 flex-wrap flex items-start justify-start xs:my-3 md:my-0'>
+                <div className='w-8/12 flex-wrap flex items-start justify-start my-2'>
                     {
                          Blog?.tag?.map((tag,idx) => (
                             <Link key={idx} to={`/relatedBlogs/${tag._id}`} className='mx-2 text-xs font-medium flex items-center justify-center group cursor-pointer hover:italic'><BsLink45Deg className='mr-1 group-hover:text-blue-800 cursor-pointer font-bold' />{tag?.tag}</Link>
