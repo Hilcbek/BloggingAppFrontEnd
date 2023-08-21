@@ -25,12 +25,14 @@ export const SingleBlog = () => {
             {(Blog?.author?._id === id) && <div className='flex items-center justify-end w-full'>
                 <Link to={`/editPage/${Blog._id}`} className='p-3 xs:w-4/12 md:w-2/12 bg-black text-white flex items-center justify-center text-xs rounded-sm'><BsFillPenFill className='mr-2' />Edit Post</Link>
             </div>}
-            <h1 className='ml-5 text-4xl font-bold mb-3 underline flex items-center justify-center'>{Blog?.title}
-            {
-                Blog?.tag?.map((tag,idx) => (
-                    <Link key={idx} to={`/relatedBlogs/${tag._id}`} className='ml-1 text-xs font-medium flex items-center justify-center group cursor-pointer hover:italic'><BsLink45Deg className='mr-1 group-hover:text-blue-800 cursor-pointer font-bold' />{tag?.tag}</Link>
-                ))
-            }
+            <h1 className='ml-5 w-8/12 text-4xl font-bold mb-3 underline flex items-center justify-center'>{Blog?.title}
+                <div className='w-5/12 ml-4 flex-wrap flex items-start justify-start'>
+                    {
+                         Blog?.tag?.map((tag,idx) => (
+                            <Link key={idx} to={`/relatedBlogs/${tag._id}`} className='mx-2 text-xs font-medium flex items-center justify-center group cursor-pointer hover:italic'><BsLink45Deg className='mr-1 group-hover:text-blue-800 cursor-pointer font-bold' />{tag?.tag}</Link>
+                        ))
+                    }
+                </div>
             </h1>
             <div className='cursor-pointer xs:columns-1 md:columns-2 gap-2 lg:columns-3 w-full mr-5'>
                  {
