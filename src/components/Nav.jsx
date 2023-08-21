@@ -77,7 +77,7 @@ const Nav = () => {
             <h1 className='text-xl font-bold mr-3'>Related Tags :</h1>
             {
                 loading ? <PuffLoader color={color} loading={loading} size={18} aria-label="Loading Spinner" data-testid="loader"/> : TagsAll.map((tag,idx) => (
-                    <Link onClick={() => setShow(!show)} key={idx} to={`/relatedBlogs/${tag._id}`} className='flex items-center my-1 justify-center rounded-[10px] border-solid p-1 border-blue-800 border-[1px] mx-1 w-auto cursor-pointer group scale-100 transition'><p className='text-xs font-normal'>{tag.tag}</p> <BsLink45Deg className={'group-hover:scale-110 text-xl'} /></Link>
+                    <Link onClick={() => setShow(!show)} key={idx} to={`/relatedBlogs/${tag._id}`} className='flex items-center my-1 justify-center rounded-[10px] border-solid p-1 border-blue-800 border-[1px] mx-1 w-auto cursor-pointer group scale-100 transition'><p className='text-xs font-normal'>{tag.tag}</p> <BsLink45Deg className={'group-hover:scale-110 group-hover:text-red-500 drop text-xl'} /></Link>
                 ))
             }
             
@@ -88,7 +88,7 @@ const Nav = () => {
                 <h1 className='text-xl font-bold mr-3'>Related Tags :</h1>
                {
                 loading ? <PuffLoader color={color} loading={loading} size={18} aria-label="Loading Spinner" data-testid="loader"/> : TagsAll.map((tag,idx) => (
-                    <Link onClick={() => setShow(!show)} key={idx} to={`/relatedBlogs/${tag._id}`} className='flex items-center my-1 justify-center rounded-[10px] border-solid p-1 border-blue-800 border-[1px] mx-1 w-auto cursor-pointer group scale-100 transition'><p className='text-xs font-normal'>{tag.tag}</p> <BsLink45Deg className={'group-hover:scale-110 text-xl'} /></Link>
+                    <Link onClick={() => setShow(!show)} key={idx} to={`/relatedBlogs/${tag._id}`} className='flex items-center my-1 justify-center rounded-[10px] border-solid p-1 border-blue-800 border-[1px] mx-1 w-auto cursor-pointer group scale-100 transition'><p className='text-xs font-normal'>{tag.tag}</p> <BsLink45Deg className={'group-hover:scale-110 text-xl group-hover:text-red-500 drop'} /></Link>
                 ))
             }
             </div>}
