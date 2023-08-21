@@ -21,7 +21,7 @@ const RelatedPosts = () => {
     },[location])
   return (
     <div className='flex items-start mt-12 justify-start min-h-screen flex-col xs:w-11/12 md:w-9/12 mx-auto'>
-        {(Array.isArray(Blogs) && Blogs.length > 0) && <h1 className='text-xl font-bold'>Related Posts of <span className='italic text-red-500'>`{Blogs[0]?.author?.username}`</span></h1>}
+        {(Array.isArray(Blogs) && Blogs.length > 0) && <h1 className='text-xl mt-5 font-bold'>Related Posts of <span className='italic text-red-500'>`{Blogs[0]?.author?.username}`</span></h1>}
         {
             loading ? <PuffLoader color={color} loading={loading} size={100} aria-label="Loading Spinner" data-testid="loader"/> : (Array.isArray(Blogs) && Blogs.length > 0) ? (
                 Blogs?.map((data) => (
