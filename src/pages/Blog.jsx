@@ -44,9 +44,9 @@ const Blog = ({data}) => {
             </p>
             <div className={`${(data.author._id === id) ? 'justify-between' : 'justify-end'} h-full my-5 xs:w-[90%] sm:w-[96%] flex items-center`}>
                 <Link to={username ? `/relatedBlogs/${data?.author?._id}` : '/login'} className='text-xs font-bold'><span className='font-normal mr-1'>Author :</span>{data?.author?.username}</Link>
-                {(data.author._id === id && navigate) && <Link to={username ? `/editPage/${data._id}` : '/login'}  className='p-3 xs:w-7/12 sm:w-4/12 bg-black text-white flex items-center justify-center text-xs rounded-sm'><BsFillPenFill className='mr-2' />Edit Post</Link>}
+                {(data.author._id === id && navigate) && <Link to={username ? `/editPage/${data._id}` : '/login'}  className='p-3 xs:w-7/12 sm:w-4/12 bg-black hover:border-[#009866] text-white flex items-center justify-center text-xs rounded-sm group'><BsFillPenFill className='mr-2 group-hover:text-[#009866]' /><span className='group-hover:text-[#009866]'>Edit Post</span></Link>}
             </div>
-            {(data.author._id === id && navigate) && <button onClick={() => DeletePost(data._id)} className='z-[999999] pointer-events-auto p-3 my-3 text-sm rounded-sm cursor-pointer bg-black text-white xs:w-7/12 sm:w-4/12 group flex items-center justify-center'><MdDelete className='mr-1 group-hover:text-red-800' />{loading ? <PuffLoader color={color} loading={loading} size={18} aria-label="Loading Spinner" data-testid="loader"/> : <span className='group-hover:text-red-800'>Delete Post</span>}</button>}
+            {(data.author._id === id && navigate) && <button onClick={() => DeletePost(data._id)} className='z-[999999] hover:bg-white pointer-events-auto p-3 my-3 text-sm rounded-sm cursor-pointer bg-black hover:border-red-800 text-white xs:w-7/12 sm:w-4/12 group flex items-center justify-center'><MdDelete className='mr-1 group-hover:text-red-800' />{loading ? <PuffLoader color={color} loading={loading} size={18} aria-label="Loading Spinner" data-testid="loader"/> : <span className='group-hover:text-red-800'>Delete Post</span>}</button>}
         </div>
     </div>
   )
