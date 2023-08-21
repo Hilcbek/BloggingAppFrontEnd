@@ -65,5 +65,5 @@
     }
 }
 .drop:hover{
-    filter: drop-shadow(1px 20px 1px red);
+    filter: drop-shadow(1px 20px 0px red);
 }
