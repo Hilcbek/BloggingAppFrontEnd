@@ -45,7 +45,7 @@ const Nav = () => {
     }
     document.querySelectorAll('.buttons button').forEach((button) => button.addEventListener('click', () => setShow(!show)))
   return (
-    <nav className={`z-[9999999] fixed top-0 w-full bg-white/90`}>
+    <nav className={`z-[9999999] fixed shadow-md shadow-black/20 py-1 top-0 w-full bg-white/90`}>
         <div className='xs:w-11/12 lg:w-9/12 mx-auto flex items-center justify-between'>
             <ul className='flex items-center justify-center'>
                 <Link to={'/'} className='flex items-center justify-center transition'>
