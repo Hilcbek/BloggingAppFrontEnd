@@ -45,7 +45,7 @@ export const SingleBlog = () => {
                 <p dangerouslySetInnerHTML={{__html : String(Blog?.desc)}}  className='my-2 xs:text-[14px] font-Poppins font-light sm:text-[18px] break-words w-[96%]'>
                 </p>
                 <div className='h-full my-5 w-[96%] flex items-center justify-end xs:pr-10 md:pr-3'>
-                    <Link to={`/relatedBlogs/${Blog?.author?._id}`} className='text-xs font-bold'><span className='font-normal mr-1'>Author :</span>{Blog?.author?.username}</Link>
+                    <Link to={`/relatedBlogs/${Blog?.author?._id}`} className='hover:underline text-xs font-bold'><span className='font-normal mr-1'>Author :</span>{Blog?.author?.username}</Link>
                 </div>
             </div>
         </div>}

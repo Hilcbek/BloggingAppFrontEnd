@@ -37,7 +37,7 @@ const RelatedPosts = () => {
                                         } <span className='ml-2'>{data?.createdAt}</span></h2>
                                         <p dangerouslySetInnerHTML={{__html : String(data?.desc)}} className='my-2 xs:text-[14px] font-Poppins font-light sm:text-[18px] break-words w-[96%]'>
                                     </p>
-                                    <div className={`${(data.author._id === id) ? 'justify-between' : 'justify-end'} h-full my-5 xs:w-[90%] sm:w-[96%] flex items-center`}>
+                                    <div className={`${(data.author._id === id) ? 'justify-between' : 'justify-end'} hover:underline h-full my-5 xs:w-[90%] sm:w-[96%] flex items-center`}>
                                         <Link to={`/relatedBlogs/${data?.author?._id}`} className='text-xs font-bold'><span className='font-normal mr-1'>Author :</span>{data?.author?.username}</Link>
                                         {(data.author._id === id) && <Link to={`/editPage/${data._id}`}  className='p-3 w-4/12 bg-black text-white flex items-center justify-center text-xs rounded-sm'><BsFillPenFill className='mr-2' />Edit Post</Link>}
                                     </div>
