@@ -35,7 +35,7 @@ const RelatedPosts = () => {
                                         <h2 className='my-2 text-xs font-medium ml-5 flex items-center justify-center group cursor-pointer'><BsLink45Deg className='mr-1 group-hover:text-blue-800 cursor-pointer' />{
                                         data?.tag?.map((tag) => <Link to={`/relatedBlogs/${tag._id}`} className='mr-1 hover:underline hover:italic'>{tag?.tag}</Link>)
                                         } <span className='ml-2'>{data?.createdAt}</span></h2>
-                                        <p dangerouslySetInnerHTML={{__html : String(data?.desc)}} className='w-[96%] xs:text-[12px] sm:text-[16px] cursor-auto break-words'>
+                                        <p dangerouslySetInnerHTML={{__html : String(data?.desc)}} className='my-2 xs:text-[14px] font-Poppins font-light sm:text-[18px] break-words w-[96%]'>
                                     </p>
                                     <div className={`${(data.author._id === id) ? 'justify-between' : 'justify-end'} h-full my-5 xs:w-[90%] sm:w-[96%] flex items-center`}>
                                         <Link to={`/relatedBlogs/${data?.author?._id}`} className='text-xs font-bold'><span className='font-normal mr-1'>Author :</span>{data?.author?.username}</Link>

@@ -25,8 +25,8 @@ export const SingleBlog = () => {
             {(Blog?.author?._id === id) && <div className='flex items-center justify-end w-full'>
                 <Link to={`/editPage/${Blog._id}`} className='p-3 xs:w-8/12 md:w-2/12 bg-black text-white flex items-center justify-center text-xs rounded-sm'><BsFillPenFill className='mr-2' />Edit Post</Link>
             </div>}
-            <h1 className='ml-5 w-8/12 xs:text-2xl sm:text-4xl font-bold mb-3 underline flex items-center xs:flex-col sm:flex-row justify-center'>{Blog?.title}
-                <div className='w-5/12 ml-4 flex-wrap flex items-start justify-start'>
+            <h1 className='xs:text-xl sm:w-full sm:text-4xl xs:my-2 md:my-0 font-bold xs:underline sm:underline-no break-words xs:w-full md:w-11/12'>{Blog?.title}
+                <div className='w-8/12 flex-wrap flex items-start justify-start xs:my-3 md:my-0'>
                     {
                          Blog?.tag?.map((tag,idx) => (
                             <Link key={idx} to={`/relatedBlogs/${tag._id}`} className='mx-2 text-xs font-medium flex items-center justify-center group cursor-pointer hover:italic'><BsLink45Deg className='mr-1 group-hover:text-blue-800 cursor-pointer font-bold' />{tag?.tag}</Link>
@@ -42,9 +42,9 @@ export const SingleBlog = () => {
                  }
             </div>
             <div className=' ml-5 flex w-full items-start justify-between flex-col'>
-                <p dangerouslySetInnerHTML={{__html : String(Blog?.desc)}}  className='my-2 xs:text-[12px] sm:text-[16px] break-words w-[96%]'>
+                <p dangerouslySetInnerHTML={{__html : String(Blog?.desc)}}  className='my-2 xs:text-[14px] font-Poppins font-light sm:text-[18px] break-words w-[96%]'>
                 </p>
-                <div className='h-full my-5 w-[96%] flex items-center justify-end mr-4'>
+                <div className='h-full my-5 w-[96%] flex items-center justify-end xs:pr-10 md:pr-3'>
                     <Link to={`/relatedBlogs/${Blog?.author?._id}`} className='text-xs font-bold'><span className='font-normal mr-1'>Author :</span>{Blog?.author?.username}</Link>
                 </div>
             </div>

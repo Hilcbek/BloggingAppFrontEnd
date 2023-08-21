@@ -31,9 +31,11 @@ const Blogs = () => {
       }
       search2 && result()
   },[search2])
+   let [show,setShow] = useState(false)
+  window.onscroll = () => window.scrollY > 10 ? setShow(true) : setShow(false)
   return (
     <div className={`${loading ? 'flex items-center justify-center flex-col' : 'flex items-start justify-start flex-col' } w-full my-5 relative`}>
-          {posts.length > 0 && <div className='my-2 flex items-center justify-start mr-1 w-full'>
+          {posts.length > 0 && <div className={`${show ? 'fixed w-[1130px]' : 'static'} z-[9999999] mb-2 flex items-center justify-start mr-1 w-full`}>
               <input value={search2} onChange={(e) => setSearch2(e.target.value)} type="text" placeholder='Search post by title...' className='pl-5 w-full text-sm outline-none mr-2 p-[13px] rounded-3xl border=-solid border-black/60 border-[1px]' />
           </div>}
         {
