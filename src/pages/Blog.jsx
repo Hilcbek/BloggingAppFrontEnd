@@ -35,7 +35,7 @@ const Blog = ({data}) => {
             <h2 className='my-3 text-xs font-medium ml-5 w-full flex items-start justify-start xs:flex-col sm:flex-row group cursor-pointer'>
                 <div className='w-8/12 flex-wrap flex items-start justify-start'>
                     {
-                        data?.tag?.map((tag) => <Link to={`/relatedBlogs/${tag._id}`} className='mx-2 flex items-center justify-start hover:underline hover:italic'><BsLink45Deg className='mr-1 group-hover:text-blue-800 cursor-pointer font-bold' />{tag?.tag}</Link>)
+                        data?.tag?.map((tag) => <Link to={`/relatedBlogs/${tag._id}`} className='mx-2 flex items-start justify-start hover:underline hover:italic'><BsLink45Deg className='mr-1 group-hover:text-blue-800 cursor-pointer font-bold' />{tag?.tag}</Link>)
                     }
                 </div>
                 <span className='md:ml-2 xs:mt-2 md:mt-0 xs:font-bold md:font-normal'>{data?.createdAt}</span>

@@ -32,8 +32,8 @@ const RelatedPosts = () => {
                             </div>
                                     <div className=' ml-5 flex w-full items-start justify-between flex-col'>
                                         <h1 className='xs:text-2xl xs:w-11/12 sm:w-full sm:text-4xl font-bold'>{data?.title}</h1>
-                                        <h2 className='my-2 text-xs font-medium ml-5 flex items-center justify-center group cursor-pointer'><BsLink45Deg className='mr-1 group-hover:text-blue-800 cursor-pointer' />{
-                                        data?.tag?.map((tag) => <Link to={`/relatedBlogs/${tag._id}`} className='mr-1 hover:underline hover:italic'>{tag?.tag}</Link>)
+                                        <h2 className='my-2 text-xs font-medium ml-5 flex items-center justify-center group cursor-pointer'>{
+                                        data?.tag?.map((tag) => <Link to={`/relatedBlogs/${tag._id}`} className='mr-1 flex items-start justify-start hover:underline hover:italic'><BsLink45Deg className='mr-1 group-hover:text-blue-800 cursor-pointer' />{tag?.tag}</Link>)
                                         } <span className='ml-2'>{data?.createdAt}</span></h2>
                                         <p dangerouslySetInnerHTML={{__html : String(data?.desc)}} className='my-2 xs:text-[14px] font-Poppins font-light sm:text-[18px] break-words w-[96%]'>
                                     </p>
