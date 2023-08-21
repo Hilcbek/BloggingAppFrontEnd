@@ -25,12 +25,12 @@ const Blog = ({data}) => {
     }
   return (
     <div className='w-full flex items-start justify-start xs:flex-col lg:flex-row blog my-8 shadow-md shadow-black/20 p-1'>
-       <abbr title="Click to read more">
-         <Link onClick={handleTop} to={username ? `/blog/${data?._id}` : '/login'} className='cursor-pointer w-full mr-5'>
+       <abbr title="Click to read more" className='cursor-pointer w-full mr-5'>
+         <Link onClick={handleTop} to={username ? `/blog/${data?._id}` : '/login'}>
             <img className='image w-full h-full object-cover' src={data?.images[0]} alt="" />
             </Link>
        </abbr>
-        <div className=' ml-5 flex w-full items-start justify-between flex-col'>
+        <div className='ml-5 flex w-full items-start justify-between flex-col'>
             <h1 className='xs:text-2xl xs:w-11/12 sm:w-full sm:text-4xl font-bold'>{data?.title}</h1>
             <h2 className='my-3 text-xs font-medium ml-5 w-full flex items-start justify-start group cursor-pointer'>
                 <div className='w-8/12 flex-wrap flex items-start justify-start'>
