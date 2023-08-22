@@ -34,7 +34,7 @@ export const SingleBlog = () => {
                     }
                 </div>
             </h1>
-            <div className='cursor-pointer z-[9999] xs:columns-1 md:columns-2 gap-2 lg:columns-3 w-full mr-5'>
+            <div className='cursor-pointer z-[9999] xs:columns-1 md:columns-2 gap-2 lg:columns-3 w-full md:mr-5'>
                  {
                     Blog?.images?.map((img,idx) => (
                         <img key={idx} className='image m-1 w-full h-full object-cover' src={img} alt="" />
